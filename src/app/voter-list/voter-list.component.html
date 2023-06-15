@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h2>Voter List</h2>
+      </div>
+ <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>VoterId</th>
+            <th>name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>PhoneNumber</th>
+            <th>UserName</th>
+            <th>PassWord</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+          <ng-container *ngFor="let voter of voters">
+         <tr>
+            <td>{{voter.voterId}}</td>
+            <td>{{voter.name}}</td>
+            <td>{{voter.age}}</td>
+            <td>{{voter.gender}}</td>
+            <td>{{voter.phoneNumber}}</td>
+            <td>{{voter.userName}}</td>
+            <td>{{voter.passWord}}</td>
+          
+          </tr>
+        </ng-container>
+        </tbody>
+      </table>
+   
+    </div>
+ 
+  </div>
+
+</div>

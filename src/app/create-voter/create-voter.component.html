@@ -1,0 +1,68 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Add Voter</h2>
+  </div>
+  <div class="panel-body">
+    <form>
+      <div class="form-group">
+        <label for="voterId">VoterId:</label>
+        <!-- <input type="number" class="form-control" id="voterId" name="voterId" required> -->
+        <input type="text" class="form-control" name="voterId" [(ngModel)]="voterId" required
+       placeholder="Enter Voter ID" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]*">
+
+      </div>
+    
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="name" required>
+
+        <!-- <input type="text" class="form-control" id="userName" name="userName" required> -->
+      </div>
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" class="form-control" name="age" [(ngModel)]="age" required>
+
+        <!-- <input type="number" class="form-control" id="age" name="age" required> -->
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <input type="text" class="form-control" name="gender" [(ngModel)]="gender" required>
+        <select class="form-control" id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" class="form-control" name="phoneNumber" [(ngModel)]="phoneNumber" required>
+        <!-- <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" required> -->
+      </div>
+
+      <div class="form-group">
+        <label for="userName">Username:</label>
+        <input type="text" class="form-control" name="userName" [(ngModel)]="userName" required>
+
+        <!-- <input type="text" class="form-control" id="userName" name="userName" required> -->
+      </div>
+      <div class="form-group">
+        <label for="passWord">Password:</label>
+        <input type="password" class="form-control" name="passWord" [(ngModel)]="passWord" required>
+        <!-- <input type="password" class="form-control" id="passWord" name="passWord" required> -->
+      </div>
+
+      <button type="button" value="Go back!" (click)="makeHttpRequest()" >Add Voter</button>
+
+      <form><div>
+
+        <input type="button" value="Go back!" onclick="history.back()"></div>
+       </form>
+       
+    </form>
+  </div>
+  <router-outlet></router-outlet>
+
+</div>
+
+
